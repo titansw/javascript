@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio do horário</title>
+    <style>
+        **{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            background-color: rgb(180, 149, 71);
+        }
+        h1{
+            color: white;
+            text-align: center;
+        }
+        div#hora{
+            background-color: white;
+            height: 300px;
+            width: 500px;
+            margin: auto;
+            border-radius: 2%;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.438);
+        }
+        div#hora > p{
+            text-align: center;
+            font: 12pt;
+            color: black;
+            padding-top: 20px;
+            font-style: normal;
+        }
+        img{
+            display: block;
+            height: 225px;
+            width: 225px;
+            margin: auto;
+            border-radius: 50%;
+            box-shadow: 2px 2px 5px black;
+            color: rgb(0, 1, 44);
+        }
+        p{
+            text-align: center;
+            color: white;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hora do dia</h1>
+    <div id="hora">
+    
+    </div>
+    <p>&copy; Titan</p>
+
+    <script>
+        var agora = new Date()
+        var ihora = agora.getHours()
+        var hora = document.getElementById('hora')
+
+        hora.innerHTML += `<p>Agora são ${ihora} horas.</p>`
+
+        if (ihora >=6 && ihora <= 12){
+            document.body.style.backgroundColor = 'darkgoldenrod'
+            hora.innerHTML += '<img src="imagens/manha.jpg" alt="manha">'
+            
+
+        }else if (ihora <= 17 && ihora > 12) {
+            document.body.style.backgroundColor = 'rgb(255, 136, 0)'
+            hora.innerHTML += '<img src="imagens/tarde.jpg" alt="manha">'
+            
+
+        }else if (ihora <= 23 & ihora >= 18) {
+            document.body.style.backgroundColor = 'rgb(48, 25, 0)'
+            hora.innerHTML += '<img src="imagens/noite.jpg" alt="manha">'
+            
+            
+        }else if (ihora <= 5 && ihora >= 0){
+            document.body.style.backgroundColor = 'rgb(0, 1, 44)'
+            hora.innerHTML += '<img src="imagens/madrugada.jpg" alt="manha">'
+            
+
+        
+    }
+    </script>
+</body>
+</html>

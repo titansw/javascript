@@ -1,0 +1,42 @@
+typeof      mostra o tipo da var
+
+Number() = converte para Number
+String() = converte para String
+`Olá, mundo ${}`
+
+s.length        qunts caracteres a string tem
+s.toUpperCase() tudo para MAIUSCULO
+s.toLowerCase() tudo para minúsculo
+
+n1.toFixed(2)   2 casas dpois da vírgula
+n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})  Moeda
+
+5+2 = 7
+5-2 = 3
+5*2 = 10
+5/2 = 2.5
+5%2 = 1     Resto da divisão
+5**2 = 25   Elevado a
+
+Precedência 
+1- ()
+2- **
+3- * / %
+4- + -
+
+    5-Simplificado
+        1- n = n+4 > n *= 4
+        2- n = n-5 > n -= 5
+        3- n = n*4 > n *= 4
+
+        1- n = n+1 > n ++
+        1- n = n-1 > -- n
+
+            6-Lógicos
+                1- ! negação     = não
+                2- && conjunção  = e
+                3- || disjunção  = ou
+
+                7-Ternário
+                teste ? true : false
+                    ele é?   ou

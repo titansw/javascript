@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 002</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            background-color: #205BDE;
+        }
+        h1{
+            color: rgb(255, 255, 255);
+            text-align: center;
+        }
+        main{
+            background-color: white;
+            height: 450px;
+            width: 450px;
+            margin: auto;
+            padding: 10px;
+            border-radius: 2%;
+            box-shadow: 2px 2px 5px black;
+        }
+        img{
+            display: block;
+            height: 225px;
+            width: 225px;
+            border-radius: 50%;
+            margin: auto;
+        }
+        div > p{
+            text-align: center;
+        }
+        footer{
+            color: white;
+            text-align: center;
+            font-style: italic;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Verificador de Idade</h1>
+
+    
+<main>
+       
+            <p>
+                <label for="ano">Ano de Nascimento:</label>
+                <input type="number" name="ano" id="ano"
+                min="1900" max="2023" value="2023" required>
+            </p>
+                <legend>Sexo:</legend>
+                <input type="radio" name="sexo" id="ismas" value="m" required><label for="ismas">Masculino</label>
+
+                <input type="radio" name="sexo" id="isfem" value="f"><label for="isfem">Feminino</label>
+            </p>
+            <p>
+                <input type="submit" value="Verificar" onclick="verificar()">
+            </p>
+        
+        <div id="x">
+    
+            
+        
+        </div>
+        
+
+        
+    </main>
+    
+    <footer>
+        <p>@ Titan</p>
+    </footer>
+
+  
+    <script>
+       function verificar(){
+        var iano = document.getElementById('ano')
+        var sexo = document.querySelector('input[name="sexo"]:checked').value
+        var x = document.querySelector('div#x')
+        var aano = Number(iano.value)
+        var ano = Number(iano.value)
+        aano = 2023 - aano
+
+        if (sexo == 'm'){
+            sexo = 'Homem'
+        } else {
+            sexo = 'Mulher'
+        }
+
+        x.innerHTML = `<p>Detectamos ${sexo} com ${aano} anos.</p>`
+            if (ano > 2023){
+                alert('[ERRO] Verifique os dados e tente novamente!') 
+                x.innerHTML = `<p>Erro</p>`
+
+            }else if (aano <= 18 && sexo == 'Homem'){
+                x.innerHTML += `<img src="imagens/m-criança-c.jpg" alt="Homem Jovem">`
+            
+            } else if (aano <= 18 && sexo == 'Mulher'){
+                x.innerHTML += `<img src="imagens/f-criança-c.jpg" alt="Mulher Jovem">`
+
+            } else if (aano > 19 && aano < 60 && sexo == 'Homem'){
+                x.innerHTML += `<img src="imagens/m-adulto-c.jpg" alt="Homem Adulto">`
+            
+            } else if (aano > 19 && aano < 60 && sexo == 'Mulher'){
+                x.innerHTML += `<img src="imagens/f-adulto-c.jpg" alt="Mulher adulto">`
+
+            }else if (aano >= 60 && sexo == 'Homem'){
+                x.innerHTML += `<img src="imagens/m-idoso-c.jpg" alt="Homem Idoso">`
+            
+            } else if (aano >= 60 && sexo == 'Mulher'){
+                x.innerHTML += `<img src="imagens/f-idoso-c.jpg" alt="Mulher Idoso">`
+
+            }
+            
+        }
+
+    </script>
+</body>
+</html>
