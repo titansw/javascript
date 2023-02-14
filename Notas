@@ -25,7 +25,7 @@ Precedência
 4- + -
 
     5-Simplificado
-        1- n = n+4 > n *= 4
+        1- n = n+4 > n += 4
         2- n = n-5 > n -= 5
         3- n = n*4 > n *= 4
 
@@ -40,3 +40,15 @@ Precedência
                 7-Ternário
                 teste ? true : false
                     ele é?   ou
+
+{
+    Criar tag Img 
+    var img = document.createElement('img')
+
+    Id
+    img.setAttribute('id', 'nome do id')
+    Declarar
+    img.setAttribute('src', 'foto.png')
+    Adicionar o elemento 
+    var.appendChild(nomeVar)
+}
