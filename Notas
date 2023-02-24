@@ -1,5 +1,11 @@
 typeof      mostra o tipo da var
 
+Variáveis{
+    var //x
+    let //se planeja mudar mais tarde
+    const //caso contrário 
+}
+
 Number() = converte para Number
 String() = converte para String
 `Olá, mundo ${}`
@@ -51,4 +57,10 @@ Precedência
     img.setAttribute('src', 'foto.png')
     Adicionar o elemento 
     var.appendChild(nomeVar)
+}
+
+{ 
+    Array (vetor)
+    var a = [  5  ,  8  ,  4  ]
+               0     1     2 ...
 }
