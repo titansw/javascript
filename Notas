@@ -13,6 +13,7 @@ String() = converte para String
 s.length        qunts caracteres a string tem
 s.toUpperCase() tudo para MAIUSCULO
 s.toLowerCase() tudo para minúsculo
+s.includes() pesquisa o termo
 
 n1.toFixed(2)   2 casas dpois da vírgula
 n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})  Moeda

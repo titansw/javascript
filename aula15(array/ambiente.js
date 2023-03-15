@@ -3,10 +3,16 @@ let num2 =[0,1]
 
 num[5] = 6 // add o num 6 na 5 casa
 num.push(7) // add o num 7 no último
+num.unshift() // add no começo
 num.length //qunt usados
 num.sort() //colocar em ordem
 num.indexOf() //buscar o valor de () e retorna a posição
 num.concat(num2) //concatena o num + num2
+num.toFixed(2) //se o número tiver vários valor após a virgula, ele só mostrara 2
+num.replace(".", ".") //trocar o ponto por vírgula, mas vira uma string
+num.shift() // remove do começo
+num.pop() //remove do fim
+
 
 let num3 = [...num,'%', ...num2]
 
