@@ -10,10 +10,12 @@ Number() = converte para Number
 String() = converte para String
 `Olá, mundo ${}`
 
-s.length        qunts caracteres a string tem
-s.toUpperCase() tudo para MAIUSCULO
-s.toLowerCase() tudo para minúsculo
-s.includes() pesquisa o termo
+s.length        //qunts caracteres a string tem
+s.toUpperCase() //tudo para MAIUSCULO
+s.toLowerCase() //tudo para minúsculo
+s.includes() //pesquisa o termo
+s.trim() //remove todos os espaços
+s.split(' ') //filtra o conteudo pelo que esta dentro
 
 n1.toFixed(2)   2 casas dpois da vírgula
 n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})  Moeda
@@ -24,6 +26,10 @@ n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})  Moeda
 5/2 = 2.5
 5%2 = 1     Resto da divisão
 5**2 = 25   Elevado a
+
+const nullValue = null;
+const valA = nullValue ?? "default for A"; //se o valor da var for null, irá receber determinado valor
+console.log(valA); // "default for A"
 
 Precedência 
 1- ()

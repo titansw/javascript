@@ -7,20 +7,62 @@ num.unshift() // add no começo
 num.length //qunt usados
 num.sort() //colocar em ordem
 num.indexOf() //buscar o valor de () e retorna a posição
+num.includes() //busca o valor e retorna true/false
 num.concat(num2) //concatena o num + num2
 num.toFixed(2) //se o número tiver vários valor após a virgula, ele só mostrara 2
 num.replace(".", ".") //trocar o ponto por vírgula, mas vira uma string
 num.shift() // remove do começo
 num.pop() //remove do fim
+num.join(", ") // transforma em string e coloca ", " entre cada campo do array
+num.splice(position, qunt de delete, novo valor)
+num.slice() //retorna uma cópia de parte de um array
+num.find() //retorna o primeiro valor que satisfaz o teste
+num.findIndex() //retorna o primeiro valor que satisfaz o teste, se NENHUM retorna -1
+num.forEach((conteudo, local) => console.log(conteudo, local)) // navega entre os dados de um array
+
+num.every() //se TODOS os elementos no array passaram no teste
+num.some() //se AO MENOS 1 dos elementos no array passou no teste
+arr.filter((value) => value % 2 === 0) // filtra e retorna o conteudo
+
+const toRna = ([...imput]) => imput.reduce((acumulador, valorAtual) => acumulador,  valorAtual, '');
+
+let arr = [1, 2, 3, 4];
+const newArr = arr.map((value) => value - 1);
+console.log(newArr); // chama a função
+// => [0, 1, 2, 3]
+console.log(arr); //chama o array
+// => [1, 2, 3, 4]
+
+num.reduce((accumulator, currentValue) => accumulator + currentValue) //acumulador 
 
 
 let num3 = [...num,'%', ...num2]
 
 console.log(num3)
 
+/* ```
+let arr = [1, 2, 3, 4];
 
+// Get the sum of elements
+arr.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+// => 10
 
-console.log(num)
+// Classify the numbers by whether they are odd or not
+arr.reduce(
+  (accumulator, currentValue) => {
+    if (currentValue % 2 === 0) {
+      accumulator.even.push(currentValue);
+    } else {
+      accumulator.odd.push(currentValue);
+    }
+
+    return accumulator;
+  },
+  { even: [], odd: [] }
+);
+// => { even: [2, 4], odd: [1, 3] }
+``` */
+
 
 
 
