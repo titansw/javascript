@@ -19,6 +19,7 @@ num.slice() //retorna uma cópia de parte de um array
 num.find() //retorna o primeiro valor que satisfaz o teste
 num.findIndex() //retorna o primeiro valor que satisfaz o teste, se NENHUM retorna -1
 num.forEach((conteudo, local) => console.log(conteudo, local)) // navega entre os dados de um array
+num.startsWith('D') //Inicia com...
 
 num.every() //se TODOS os elementos no array passaram no teste
 num.some() //se AO MENOS 1 dos elementos no array passou no teste
