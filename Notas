@@ -16,6 +16,7 @@ s.toLowerCase() //tudo para minúsculo
 s.includes() //pesquisa o termo
 s.trim() //remove todos os espaços
 s.split(' ') //filtra o conteudo pelo que esta dentro
+Math.floor() //arredonda para baixo o inteiro = 4.2 > 4
 
 n1.toFixed(2)   2 casas dpois da vírgula
 n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})  Moeda

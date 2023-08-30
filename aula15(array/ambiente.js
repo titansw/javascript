@@ -2,8 +2,9 @@ let num = [5,8,2,9,3]
 let num2 =[0,1]
 
 num[5] = 6 // add o num 6 na 5 casa
-num.push(7) // add o num 7 no último
 num.unshift() // add no começo
+num.splice(position, qunt de delete, novo valor)
+num.push(7) // add no final
 num.length //qunt usados
 num.sort() //colocar em ordem
 num.indexOf() //buscar o valor de () e retorna a posição
@@ -12,13 +13,13 @@ num.concat(num2) //concatena o num + num2
 num.toFixed(2) //se o número tiver vários valor após a virgula, ele só mostrara 2
 num.replace(".", ".") //trocar o ponto por vírgula, mas vira uma string
 num.shift() // remove do começo
+num.splice(position, qunt de delete, novo valor)
 num.pop() //remove do fim
 num.join(", ") // transforma em string e coloca ", " entre cada campo do array
-num.splice(position, qunt de delete, novo valor)
 num.slice() //retorna uma cópia de parte de um array
-num.find() //retorna o primeiro valor que satisfaz o teste
+num.find(elemento => elemento === 5) //retorna o primeiro valor que satisfaz o teste
 num.findIndex() //retorna o primeiro valor que satisfaz o teste, se NENHUM retorna -1
-num.forEach((conteudo, local) => console.log(conteudo, local)) // navega entre os dados de um array
+num.forEach((conteudo, indice) => console.log(conteudo, indice)) // navega entre os dados de um array
 num.startsWith('D') //Inicia com...
 
 num.every() //se TODOS os elementos no array passaram no teste
