@@ -25,6 +25,12 @@ num.startsWith('D') //Inicia com...
 num.every() //se TODOS os elementos no array passaram no teste
 num.some() //se AO MENOS 1 dos elementos no array passou no teste
 arr.filter((value) => value % 2 === 0) // filtra e retorna o conteudo
+arr.map((value) => value * 2) // retorna um novo array transformado
+
+arr.flatMap(num => (num % 2 === 0 ? [num * 2] : [])) // faz a msm coisa q o filter e map juntos
+
+regex = quantificador (+) // todos q tem 
+(*) // todos q tem e mais os q tem o primeiro caractere 
 
 const toRna = ([...imput]) => imput.reduce((acumulador, valorAtual) => acumulador,  valorAtual, '');
 
