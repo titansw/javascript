@@ -1,6 +1,7 @@
 let num = [5,8,2,9,3]
 let num2 =[0,1]
 
+num.split(" ") // transforma em array, separando pelo valor dentro do ()
 num[5] = 6 // add o num 6 na 5 casa
 num.unshift() // add no começo
 num.splice(position, qunt de delete, novo valor)
@@ -17,15 +18,17 @@ num.splice(position, qunt de delete, novo valor)
 num.pop() //remove do fim
 num.join(", ") // transforma em string e coloca ", " entre cada campo do array
 num.slice() //retorna uma cópia de parte de um array
-num.find(elemento => elemento === 5) //retorna o primeiro valor que satisfaz o teste
-num.findIndex() //retorna o primeiro valor que satisfaz o teste, se NENHUM retorna -1
-num.forEach((conteudo, indice) => console.log(conteudo, indice)) // navega entre os dados de um array
+
+num.find(elemento => elemento === 5) //retorna o PRIMEIRO valor que satisfaz o teste
+num.findIndex() //retorna o PRIMEIRO INDICE do valor que satisfaz o teste, se NENHUM retorna -1
+
 num.startsWith('D') //Inicia com...
 
 num.every() //se TODOS os elementos no array passaram no teste
 num.some() //se AO MENOS 1 dos elementos no array passou no teste
-arr.filter((value) => value % 2 === 0) // filtra e retorna o conteudo
-arr.map((value) => value * 2) // retorna um novo array transformado
+arr.filter((value) => value % 2 === 0) // filtra e retorna o conteudo, NAO EDITA OS VALORES ORIGINAIS 
+num.forEach((conteudo, indice) => console.log(conteudo, indice)) // navega entre os dados de um array
+arr.map((value) => value * 2) // retorna um novo array transformado, SEMPRE DO MSM TAMANHO DO ARRAY INICIAL
 
 arr.flatMap(num => (num % 2 === 0 ? [num * 2] : [])) // faz a msm coisa q o filter e map juntos
 
@@ -123,3 +126,22 @@ function myFunction(a){
     return a.filter(res => res.length < 6)
 }
 console.log(myFunction(['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present']))
+
+// ====================================================================
+const alunos = [
+  { nome:'Mario', nota:70},
+  { nome:'Luigi', nota:56},
+  { nome:'Valks', nota:82},
+  { nome:'Renatex', nota:49}
+]
+
+const alunosSeparados = alunos.reduce((acc, aluno) => {
+
+  aluno.nota >= 70 ? acc.Aprovados.push(aluno) : acc.Reprovados.push(aluno)
+  return acc;
+}, { Aprovados: [], Reprovados: []})
+
+console.log('Alunos Aprovados');
+console.table(alunosSeparados.Aprovados)
+console.log('Alunos Reprovados');
+console.table(alunosSeparados.Reprovados)
